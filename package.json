@@ -1,0 +1,49 @@
+{
+  "title": "Select Element FX",
+  "name": "periodicjs.component.selectfx",
+  "description": "Some inspiration for styling a custom version of the select element. There are many possibilities and today we are exploring some ideas of how to let the user select a choice in style.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.x"
+  },
+  "scripts": {
+    "test": "mocha -R spec --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:typesettin/component.selectfx.git"
+  },
+  "dependencies": {
+    "classie": ">=0.1.0",
+    "util-extend": ">=1.0.1"
+  },
+  "devDependencies": {
+    "browserify": "~4.2.1",
+    "chai": "1.9.1",
+    "grunt": ">=0.4.5",
+    "grunt-contrib-jshint": ">=0.4.3",
+    "grunt-contrib-watch": ">=0.4.1",
+    "grunt-simple-mocha": ">=0.4.0",
+    "grunt-jsbeautifier": ">=0.2.7",
+    "grunt-contrib-copy": ">=0.5.0",
+    "grunt-browserify": ">=2.1.3",
+    "grunt-contrib-less": ">=0.11.3",
+    "grunt-jsdoc": ">=0.5.6",
+    "grunt-contrib-uglify": ">=0.4.0",
+    "grunt-contrib-cssmin": ">=0.9.0",
+    "grunt-templater": ">=0.0.6",
+    "grunt-newer": ">=0.7.0",
+    "jsdoc": "3.3.0-alpha5",
+    "mocha": "1.9.0",
+    "uglify-js": "^2.4.15",
+    "uglifyify": "^2.5.0",
+    "ejs": ">=0.8.5"
+  },
+  "keywords": [
+    "Periodic Decoupled Framework",
+    "ui",
+    "ux",
+    "dom"
+  ]
+}

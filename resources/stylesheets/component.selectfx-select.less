@@ -1,0 +1,93 @@
+div.cs-select {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    text-align: left;
+    background: #fff;
+    z-index: 100;
+    width: 100%;
+    max-width: 500px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+div.cs-select:focus {
+    outline: none;
+}
+.cs-select {
+    select {
+        display: none;
+    }
+    span {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        padding: 1em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    & > span {
+        padding-right: 3em;
+    }
+    & > span::after {
+        content: '\25BE';
+        right: 1em;
+    }
+    .cs-selected {
+        span::after {
+            content: '\2713';
+            margin-left: 1em;
+        }
+    }
+    .cs-options {
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        background: #fff;
+        visibility: hidden;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        span {
+            padding: 1em;
+        }
+        li.cs-focus {
+            span {
+                background-color: #ddd;
+            }
+        }
+    }
+    li.cs-optgroup {
+        ul {
+            padding-left: 1em;
+        }
+        & > span {
+            cursor: default;
+        }
+    }
+}
+.cs-select &>span::after,.cs-select .cs-selected span::after {
+    speak: none;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.cs-select.cs-active {
+    & > span::after {
+        -webkit-transform: translateY(-50%) rotate(180deg);
+        transform: translateY(-50%) rotate(180deg);
+    }
+    .cs-options {
+        visibility: visible;
+    }
+}

@@ -1,0 +1,64 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>selectfx</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/example.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/component.selectfx.css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+  <script src='js/example.min.js'></script>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Top Navigation -->
+    <div class="codrops-top clearfix">
+      <a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Development/DraggableDualViewSlideshow/">
+        <span>Previous Demo</span>
+      </a>
+      <span class="right">
+        <a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=19400">
+          <span>Back to the Codrops Article</span>
+        </a>
+      </span>
+    </div>
+    <header class="codrops-header">
+      <h1>
+        <span>Inspiration for</span>Custom Select Elements</h1>
+      <nav class="codrops-demos">
+        <a class="current-demo" href="index.html">Border</a>
+        <a href="pages/underline.html">Underline</a>
+        <a href="pages/elastic">Elastic</a>
+        <a href="index4.html">Slide</a>
+        <a href="index5.html">Overlay</a>
+        <a href="index6.html">Rotate</a>
+        <a href="index7.html">Box Select</a>
+        <a href="index8.html">Circular</a>
+      </nav>
+    </header>
+    <section>
+      <select class="cs-select cs-skin-border">
+        <option value="" disabled selected>Preferred contact method</option>
+        <option value="email">E-Mail</option>
+        <option value="twitter">Twitter</option>
+        <option value="linkedin">LinkedIn</option>
+      </select>
+    </section>
+  </div>
+  <!-- /container -->
+  <script>
+  window.addEventListener('load', function() {
+    var SelectFx = window.SelectFx;
+    console.log(window.SelectFx);
+    var selectElements = document.querySelectorAll('select.cs-select');
+    for (var x in selectElements) {
+      if (typeof selectElements[x] === 'object') {
+        new SelectFx(selectElements[x]);
+      }
+    };
+  }, false);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+div.cs-skin-slide {
+    color: #fff;
+    font-size: 1.5em;
+    width: 300px;
+}
+div.cs-skin-slide::before {
+    content: '';
+    background: #282b30;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+.cs-skin-slide.cs-active::before {
+    -webkit-transform: scale3d(1.1,3.5,1);
+    transform: scale3d(1.1,3.5,1);
+}
+.cs-skin-slide {
+    & > span {
+        height: 80px;
+        line-height: 32px;
+        -webkit-transition: text-indent 0.3s, opacity 0.3s;
+        transition: text-indent 0.3s, opacity 0.3s;
+    }
+    .cs-options {
+        background: transparent;
+        width: 70%;
+        height: 400%;
+        padding: 1.9em 0;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate3d(-50%,-50%,0);
+        transform: translate3d(-50%,-50%,0);
+        li {
+            opacity: 0;
+            -webkit-transform: translate3d(30%,0,0);
+            transform: translate3d(30%,0,0);
+            -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+            transition: transform 0.3s, opacity 0.3s;
+            span {
+                text-transform: uppercase;
+                font-weight: 500;
+                letter-spacing: 2px;
+                font-size: 65%;
+                padding: 0.8em 1em 0.8em 2.5em;
+            }
+        }
+    }
+    .cs-selected {
+        span::after {
+            content: '';
+        }
+    }
+}
+.cs-skin-slide.cs-active {
+    & > span {
+        text-indent: -290px;
+        opacity: 0;
+    }
+    & > span::after {
+        -webkit-transform: translate3d(0,-50%,0);
+        transform: translate3d(0,-50%,0);
+    }
+    .cs-options {
+        li {
+            -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            opacity: 1;
+        }
+        li:first-child {
+            -webkit-transition-delay: 0.05s;
+            transition-delay: 0.05s;
+        }
+        li:nth-child(2) {
+            -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s;
+        }
+        li:nth-child(3) {
+            -webkit-transition-delay: 0.15s;
+            transition-delay: 0.15s;
+        }
+        li:nth-child(4) {
+            -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+        }
+        li:nth-child(5) {
+            -webkit-transition-delay: 0.25s;
+            transition-delay: 0.25s;
+        }
+    }
+}
+.cs-skin-slide &>span::after,.cs-skin-slide.cs-active &>span::after {
+    font-family: 'icomoon';
+    content: '\e00f';
+    color: #eb7e7f;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.cs-skin-slide .cs-options li span:hover,.cs-skin-slide .cs-options li.cs-focus span,.cs-skin-slide .cs-options li.cs-selected span {
+    color: #eb7e7f;
+    background: transparent;
+}
+[class^="icon-"] span:before,[class*=" icon-"] span:before {
+    font-family: 'icomoon';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translate3d(0,-50%,0);
+    transform: translate3d(0,-50%,0);
+    font-size: 1.5em;
+}
+.icon-camera {
+    span::before {
+        content: '\e00b';
+    }
+}
+.icon-money {
+    span::before {
+        content: '\e008';
+    }
+}
+.icon-heart {
+    span::before {
+        content: '\e00a';
+    }
+}
+.icon-food {
+    span::before {
+        content: '\e009';
+    }
+}
+.icon-shirt {
+    span::before {
+        content: '\e00c';
+    }
+}
+
+@media screen and (max-width: 30em) {
+	div.cs-skin-slide { font-size: 1em; width: 250px; }
+}
+
+@media screen and (max-width: 30em) {
+	.cs-skin-slide > span { height: 60px; line-height: 28px; }
+}
+
+@media screen and (max-width: 30em) {
+	.cs-skin-slide .cs-options { padding-top: 3em; }
+}
