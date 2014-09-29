@@ -27,34 +27,45 @@
       <h1>
         <span>Inspiration for</span>Custom Select Elements</h1>
       <nav class="codrops-demos">
-        <a class="current-demo" href="index.html">Border</a>
-        <a href="pages/underline.html">Underline</a>
-        <a href="pages/elastic">Elastic</a>
-        <a href="index4.html">Slide</a>
-        <a href="index5.html">Overlay</a>
-        <a href="index6.html">Rotate</a>
-        <a href="index7.html">Box Select</a>
-        <a href="index8.html">Circular</a>
+        <a href="border.html">Border</a>
+        <a href="underline.html">Underline</a>
+        <a href="elastic.html">Elastic</a>
+        <a href="slide.html">Slide</a>
+        <a href="overlay.html">Overlay</a>
+        <a href="rotate.html">Rotate</a>
+        <a href="box.html">Box Select</a>
+        <a href="circular.html">Circular</a>
       </nav>
     </header>
     <section>
-      <select class="cs-select cs-skin-border">
+      <select name="contact-method" class="cs-select cs-skin-border">
         <option value="" disabled selected>Preferred contact method</option>
         <option value="email">E-Mail</option>
         <option value="twitter">Twitter</option>
         <option value="linkedin">LinkedIn</option>
       </select>
     </section>
+    <section>
+      <select name="social-network" class="cs-select cs-skin-border">
+        <option value="" disabled selected>Preferred Social Network</option>
+        <option value="email">Facebook</option>
+        <option value="twitter">Google Plus</option>
+        <option value="linkedin">Instagram</option>
+      </select>
+    </section>
   </div>
   <!-- /container -->
   <script>
+  var SelectFX = window.SelectFX,
+    socialNetwork,
+    contactMethod;
   window.addEventListener('load', function() {
-    var SelectFx = window.SelectFx;
-    console.log(window.SelectFx);
+    socialNetwork = document.querySelector('select[name="social-network"]');
+    contactMethod = document.querySelector('select[name="social-network"]');
     var selectElements = document.querySelectorAll('select.cs-select');
     for (var x in selectElements) {
       if (typeof selectElements[x] === 'object') {
-        new SelectFx(selectElements[x]);
+        new SelectFX(selectElements[x]);
       }
     };
   }, false);

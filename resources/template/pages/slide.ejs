@@ -1,0 +1,29 @@
+<html>
+<% var filepathprefix='../' ; %>
+  <% var pagepathprefix='' ; %>
+    <% include _html_head %>
+
+      <body>
+        <div class="container">
+          <% include _header %>
+            <label class="select-label">Travel Type</label>
+            <select class="cs-select cs-skin-slide">
+              <option value="sightseeing" data-class="icon-camera">Sight Seeing</option>
+              <option value="business" data-class="icon-money">Business</option>
+              <option value="honeymoon" data-class="icon-heart">Honeymoon</option>
+              <option value="food" data-class="icon-food">Gourmet</option>
+              <option value="shopping" data-class="icon-shirt">Shopping</option>
+            </select>
+        </div>
+        <!-- /container -->
+        <script>
+        var SelectFX = window.SelectFX,
+          selectElement;
+        window.addEventListener('load', function() {
+          selectElement = document.querySelector('select');
+          new SelectFX(selectElement);
+        }, false);
+        </script>
+      </body>
+
+</html>

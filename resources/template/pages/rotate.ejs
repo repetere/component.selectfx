@@ -1,0 +1,30 @@
+<html>
+<% var filepathprefix='../' ; %>
+  <% var pagepathprefix='' ; %>
+    <% include _html_head %>
+
+      <body>
+        <div class="container">
+          <% include _header %>
+            <section>
+              <label class="select-label">Choose your Dinosaur:</label>
+              <select class="cs-select cs-skin-rotate">
+                <option value="1">Stegosaurus</option>
+                <option value="2">Velociraptor</option>
+                <option value="3">Spinosaurus</option>
+                <option value="4">Archaeopteryx</option>
+                <option value="5">Apatosaurus</option>
+              </select>
+            </section>
+            <!-- /container -->
+            <script>
+            var SelectFX = window.SelectFX,
+              selectElement;
+            window.addEventListener('load', function() {
+              selectElement = document.querySelector('select');
+              new SelectFX(selectElement);
+            }, false);
+            </script>
+      </body>
+
+</html>

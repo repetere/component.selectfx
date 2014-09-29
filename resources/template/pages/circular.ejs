@@ -1,0 +1,37 @@
+<html>
+<% var filepathprefix='../' ; %>
+  <% var pagepathprefix='' ; %>
+    <% include _html_head %>
+
+      <body>
+        <div class="container">
+          <% include _header %>
+            <section>
+              <select class="cs-select cs-skin-circular">
+                <option value="" disabled selected>Select an activity</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+              </select>
+            </section>
+            <!-- /container -->
+            <script>
+            var SelectFX = window.SelectFX,
+              selectElement;
+            window.addEventListener('load', function() {
+              selectElement = document.querySelector('select');
+              new SelectFX(selectElement, {
+                onChange: function(val) {
+                  console.log('val', val);
+                }
+              });
+            }, false);
+            </script>
+      </body>
+
+</html>

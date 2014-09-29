@@ -89,6 +89,10 @@ label.select-label {
 	font-size: 1em;
 }
 
+.container header{
+	text-align:center;
+}
+
 @media screen and (max-width: 30em) {
 
 	body::before,

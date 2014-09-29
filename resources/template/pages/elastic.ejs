@@ -1,0 +1,30 @@
+<html>
+<% var filepathprefix='../' ; %>
+  <% var pagepathprefix='' ; %>
+    <% include _html_head %>
+
+      <body>
+        <div class="container">
+          <% include _header %>
+            <section>
+              <select class="cs-select cs-skin-elastic">
+                <option value="" disabled selected>Select a Country</option>
+                <option value="france" data-class="flag-france">France</option>
+                <option value="brazil" data-class="flag-brazil">Brazil</option>
+                <option value="argentina" data-class="flag-argentina">Argentina</option>
+                <option value="south-africa" data-class="flag-safrica">South Africa</option>
+              </select>
+            </section>
+        </div>
+        <!-- /container -->
+        <script>
+        var SelectFX = window.SelectFX,
+          selectElement;
+        window.addEventListener('load', function() {
+          selectElement = document.querySelector('select');
+          new SelectFX(selectElement);
+        }, false);
+        </script>
+      </body>
+
+</html>

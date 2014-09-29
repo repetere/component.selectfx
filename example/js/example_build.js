@@ -1470,9 +1470,6 @@ var navEvents = function () {
 	});
 };
 */
-
-window.SelectFX = SelectFX;
-console.log(SelectFX);
 /*
 window.addEventListener('load', function () {
 	periodicalNavigation = new navigationHeader({
@@ -1482,5 +1479,6 @@ window.addEventListener('load', function () {
 	window.periodicalNavigation = periodicalNavigation;
 }, false);
 */
+window.SelectFX = SelectFX;
 
 },{"../../index":1}]},{},[11]);
