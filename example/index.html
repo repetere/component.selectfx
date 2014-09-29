@@ -1,75 +1,37 @@
 <html>
 
-<head>
+  
+    <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>selectfx</title>
+  <title>CommonJS SelectFX</title>
   <link rel="stylesheet" type="text/css" href="stylesheets/example.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/component.selectfx.css">
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
   <script src='js/example.min.js'></script>
 </head>
 
-<body>
-  <div class="container">
-    <!-- Top Navigation -->
-    <div class="codrops-top clearfix">
-      <a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Development/DraggableDualViewSlideshow/">
-        <span>Previous Demo</span>
-      </a>
-      <span class="right">
-        <a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=19400">
-          <span>Back to the Codrops Article</span>
-        </a>
-      </span>
-    </div>
-    <header class="codrops-header">
-      <h1>
-        <span>Inspiration for</span>Custom Select Elements</h1>
-      <nav class="codrops-demos">
-        <a href="border.html">Border</a>
-        <a href="underline.html">Underline</a>
-        <a href="elastic.html">Elastic</a>
-        <a href="slide.html">Slide</a>
-        <a href="overlay.html">Overlay</a>
-        <a href="rotate.html">Rotate</a>
-        <a href="box.html">Box Select</a>
-        <a href="circular.html">Circular</a>
-      </nav>
-    </header>
-    <section>
-      <select name="contact-method" class="cs-select cs-skin-border">
-        <option value="" disabled selected>Preferred contact method</option>
-        <option value="email">E-Mail</option>
-        <option value="twitter">Twitter</option>
-        <option value="linkedin">LinkedIn</option>
-      </select>
-    </section>
-    <section>
-      <select name="social-network" class="cs-select cs-skin-border">
-        <option value="" disabled selected>Preferred Social Network</option>
-        <option value="email">Facebook</option>
-        <option value="twitter">Google Plus</option>
-        <option value="linkedin">Instagram</option>
-      </select>
-    </section>
-  </div>
-  <!-- /container -->
-  <script>
-  var SelectFX = window.SelectFX,
-    socialNetwork,
-    contactMethod;
-  window.addEventListener('load', function() {
-    socialNetwork = document.querySelector('select[name="social-network"]');
-    contactMethod = document.querySelector('select[name="social-network"]');
-    var selectElements = document.querySelectorAll('select.cs-select');
-    for (var x in selectElements) {
-      if (typeof selectElements[x] === 'object') {
-        new SelectFX(selectElements[x]);
-      }
-    };
-  }, false);
-  </script>
-</body>
+      <body>
+        <div class="container">
+          <!-- Top Navigation -->
+<header>
+  <h1>
+    <span>Inspiration for</span>&nbsp;Custom Select Elements</h1>
+  <nav>
+    <a href="pages/border.html">Border</a>
+    <a href="pages/underline.html">Underline</a>
+    <a href="pages/elastic.html">Elastic</a>
+    <a href="pages/slide.html">Slide</a>
+    <a href="pages/overlay.html">Overlay</a>
+    <a href="pages/rotate.html">Rotate</a>
+    <a href="pages/box.html">Box Select</a>
+    <a href="pages/circular.html">Circular</a>
+  </nav>
+</header>
+            <h2>Full <a href="api/doc/html">API Documentation</a>
+            </h2>
+        </div>
+        <!-- /container -->
+      </body>
 
 </html>

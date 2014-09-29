@@ -56,6 +56,8 @@ window.addEventListener('load',function(){
 
 ##API
 
+####Full API [DOCUMENTATION](https://github.com/typesettin/component.selectfx/blob/master/doc/api.md)
+
 ```javascript
 new SelectFX(selectElement, {
   onChange: function(val) {
