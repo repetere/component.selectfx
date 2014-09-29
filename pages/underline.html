@@ -1,0 +1,53 @@
+<html>
+
+  
+    <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CommonJS SelectFX</title>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/example.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/component.selectfx.css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+  <script src='../js/example.min.js'></script>
+</head>
+
+      <body>
+        <div class="container">
+          <!-- Top Navigation -->
+<header>
+  <h1>
+    <span>Inspiration for</span>&nbsp;Custom Select Elements</h1>
+  <nav>
+    <a href="border.html">Border</a>
+    <a href="underline.html">Underline</a>
+    <a href="elastic.html">Elastic</a>
+    <a href="slide.html">Slide</a>
+    <a href="overlay.html">Overlay</a>
+    <a href="rotate.html">Rotate</a>
+    <a href="box.html">Box Select</a>
+    <a href="circular.html">Circular</a>
+  </nav>
+</header>
+            <section>
+              <select class="cs-select cs-skin-underline">
+                <option value="" disabled selected>Choose a Bouquet</option>
+                <option value="1">Gardenia + Daisies</option>
+                <option value="2">Roses + Stephanotis</option>
+                <option value="3">Peony + Gerbera</option>
+                <option value="4">Orchid + Limonium</option>
+                <option value="5">Iris + Omithoalum</option>
+              </select>
+            </section>
+        </div>
+        <!-- /container -->
+        <script>
+        var SelectFX = window.SelectFX,
+          selectElement;
+        window.addEventListener('load', function() {
+          selectElement = document.querySelector('select');
+          new SelectFX(selectElement);
+        }, false);
+        </script>
+      </body>
+
+</html>
